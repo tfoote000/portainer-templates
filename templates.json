@@ -17,10 +17,10 @@
             "restart_policy": "always",
             "volumes": [
                 {
-                    "pihole_dnsmasq": "/etc/dnsmasq.d"
+                    "container": "/etc/dnsmasq.d"
                 },
                 {
-                    "pihole_config": "/etc/pihole"
+                    "container": "/etc/pihole"
                 }
             ]
         }
