@@ -1,0 +1,28 @@
+{
+    "version": "2",
+    "templates": [
+        {
+            "type": 1,
+            "title": "Pi-Hole",
+            "description": "DNS and DHCP server. Ad Blocking available.",
+            "logo": "https://pi-hole.net/wp-content/uploads/2016/07/Pi-hole-vortex2-300x300.jpg",
+            "image": "pihole/pihole:latest",
+            "ports": [
+                "53:53/udp",
+                "53:53/tcp",
+                "67:67/udp",
+                "80:80/tcp",
+                "443:443/tcp"
+            ],
+            "restart_policy": "always",
+            "volumes": [
+                {
+                    "pihole_dnsmasq": "/etc/dnsmasq.d"
+                },
+                {
+                    "pihole_config": "/etc/pihole"
+                }
+            ]
+        }
+    ]
+}
